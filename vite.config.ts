@@ -7,7 +7,7 @@
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
 // GitHub Pages build: set GITHUB_PAGES_BASE (e.g. "/my-repo/") to produce a static, prerendered site.
-const pagesBase = process.env.GITHUB_PAGES_BASE;
+const pagesBase = process.env["GITHUB_PAGES_BASE"];
 
 export default defineConfig({
   tanstackStart: {
