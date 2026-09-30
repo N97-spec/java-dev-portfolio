@@ -108,7 +108,7 @@ export function Hero() {
       />
 
       <div className="relative mx-auto grid max-w-6xl gap-14 px-5 pt-16 pb-20 md:px-8 md:pt-24 lg:grid-cols-[1.05fr_1fr] lg:items-center lg:gap-10">
-        <div>
+        <div className="min-w-0">
           <Reveal>
             <div className="flex flex-wrap items-center gap-3 font-mono text-xs tracking-[0.16em] uppercase">
               <span className="inline-flex items-center gap-2 rounded-full border border-ember/40 bg-ember/10 px-3 py-1.5 text-ember">
@@ -165,7 +165,7 @@ export function Hero() {
           </Reveal>
         </div>
 
-        <Reveal delay={180}>
+        <Reveal delay={180} className="min-w-0">
           <div className="overflow-hidden rounded-xl border border-border bg-surface/90 shadow-2xl shadow-black/50 backdrop-blur">
             <div className="flex items-center gap-2 border-b border-border bg-surface-2/70 px-4 py-3">
               <span className="h-3 w-3 rounded-full bg-destructive/70" />
