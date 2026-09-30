@@ -77,19 +77,32 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Neha Yarrapothu — Java Full Stack Developer" },
+      {
+        name: "description",
+        content:
+          "Java Full Stack Developer in Denton, TX building enterprise web applications with Java 11/17, Spring Boot, REST APIs, Hibernate/JPA, and SQL.",
+      },
+      { name: "author", content: "Neha Yarrapothu" },
       { property: "og:type", content: "website" },
+      { property: "og:title", content: "Neha Yarrapothu — Java Full Stack Developer" },
+      {
+        property: "og:description",
+        content:
+          "Java Full Stack Developer in Denton, TX building enterprise web applications with Java 11/17, Spring Boot, REST APIs, Hibernate/JPA, and SQL.",
+      },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
       {
         rel: "stylesheet",
         href: appCss,
+      },
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Work+Sans:wght@400;500;600;700&display=swap",
       },
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
     ],
