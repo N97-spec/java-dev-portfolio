@@ -1,3 +1,5 @@
+import { useEffect, useRef, useState } from "react";
+
 import { profile, ticker } from "@/data/profile";
 import { Reveal } from "@/components/ui";
 
@@ -99,6 +101,23 @@ const code: Tok[][] = [
 ];
 
 export function Hero() {
+  const codeRef = useRef<HTMLPreElement | null>(null);
+  const [scrollable, setScrollable] = useState(false);
+
+  useEffect(() => {
+    const el = codeRef.current;
+    if (!el) return;
+    const check = () => setScrollable(el.scrollWidth - el.clientWidth > 4);
+    check();
+    const observer = new ResizeObserver(check);
+    observer.observe(el);
+    window.addEventListener("resize", check);
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("resize", check);
+    };
+  }, []);
+
   return (
     <section id="top" className="relative overflow-hidden pt-16">
       <div className="pointer-events-none absolute inset-0 bg-grid" aria-hidden="true" />
@@ -177,11 +196,14 @@ export function Hero() {
             </div>
 
             <div className="relative">
-              <pre className="overflow-x-auto px-4 py-5 font-mono text-[11.5px] leading-[1.6] md:text-[13px]">
+              <pre
+                ref={codeRef}
+                className="overflow-x-auto px-4 py-5 font-mono text-[11.5px] leading-[1.6] md:text-[12.5px]"
+              >
               <code>
                 {code.map((line, i) => (
                   <div key={i} className="flex min-h-[1.65em]">
-                    <span className="mr-4 w-5 shrink-0 text-right text-muted-foreground/35 select-none">
+                    <span className="mr-3 w-4 shrink-0 text-right text-muted-foreground/35 select-none">
                       {i + 1}
                     </span>
                     <span className="whitespace-pre">
@@ -195,10 +217,12 @@ export function Hero() {
                 ))}
               </code>
               </pre>
-              <div
-                className="pointer-events-none absolute inset-y-0 right-0 w-12 bg-gradient-to-l from-surface via-surface/70 to-transparent md:hidden"
-                aria-hidden="true"
-              />
+              {scrollable ? (
+                <div
+                  className="pointer-events-none absolute inset-y-0 right-0 w-12 bg-gradient-to-l from-surface via-surface/70 to-transparent"
+                  aria-hidden="true"
+                />
+              ) : null}
             </div>
 
             <div className="flex items-center gap-2 border-t border-border bg-surface-2/60 px-4 py-3 font-mono text-xs">
