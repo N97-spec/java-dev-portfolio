@@ -176,7 +176,7 @@ export function Hero() {
               </span>
             </div>
 
-            <pre className="overflow-x-auto px-4 py-5 font-mono text-[12.5px] leading-[1.65] md:text-[13px]">
+            <pre className="code-scroll overflow-x-auto px-4 py-5 font-mono text-[11.5px] leading-[1.6] md:text-[13px]">
               <code>
                 {code.map((line, i) => (
                   <div key={i} className="flex min-h-[1.65em]">
