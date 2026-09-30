@@ -235,13 +235,6 @@
   color: var(--muted-foreground);
 }
 
-/* Signal that the snippet scrolls sideways instead of ending mid-word. */
-@media (max-width: 767px) {
-  .code-scroll {
-    mask-image: linear-gradient(to right, #000 calc(100% - 34px), transparent 100%);
-    -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 34px), transparent 100%);
-  }
-}
 
 
 @media (prefers-reduced-motion: reduce) {

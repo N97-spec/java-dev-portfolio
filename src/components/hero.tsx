@@ -166,7 +166,7 @@ export function Hero() {
         </div>
 
         <Reveal delay={180} className="min-w-0">
-          <div className="overflow-hidden rounded-xl border border-border bg-surface/90 shadow-2xl shadow-black/50 backdrop-blur">
+          <div className="overflow-hidden rounded-xl border border-border bg-surface shadow-2xl shadow-black/50">
             <div className="flex items-center gap-2 border-b border-border bg-surface-2/70 px-4 py-3">
               <span className="h-3 w-3 rounded-full bg-destructive/70" />
               <span className="h-3 w-3 rounded-full bg-ember/70" />
@@ -176,7 +176,8 @@ export function Hero() {
               </span>
             </div>
 
-            <pre className="code-scroll overflow-x-auto px-4 py-5 font-mono text-[11.5px] leading-[1.6] md:text-[13px]">
+            <div className="relative">
+              <pre className="overflow-x-auto px-4 py-5 font-mono text-[11.5px] leading-[1.6] md:text-[13px]">
               <code>
                 {code.map((line, i) => (
                   <div key={i} className="flex min-h-[1.65em]">
@@ -193,7 +194,12 @@ export function Hero() {
                   </div>
                 ))}
               </code>
-            </pre>
+              </pre>
+              <div
+                className="pointer-events-none absolute inset-y-0 right-0 w-12 bg-gradient-to-l from-surface via-surface/70 to-transparent md:hidden"
+                aria-hidden="true"
+              />
+            </div>
 
             <div className="flex items-center gap-2 border-t border-border bg-surface-2/60 px-4 py-3 font-mono text-xs">
               <span className="text-sage">$</span>
