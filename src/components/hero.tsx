@@ -56,7 +56,7 @@ const code: Tok[][] = [
     { t: "," },
   ],
   [
-    { t: "                ", c: "plain" },
+    { t: "            ", c: "plain" },
     { t: '"REST APIs"', c: "str" },
     { t: ", ", c: "plain" },
     { t: '"PostgreSQL"', c: "str" },
