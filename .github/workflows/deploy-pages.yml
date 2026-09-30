@@ -33,12 +33,25 @@ jobs:
 
       - name: Prepare Pages folder
         run: |
-          touch dist/client/.nojekyll
-          cp dist/client/index.html dist/client/404.html
+          # Detect the actual static output directory
+          if [ -d dist/client ]; then
+            OUT=dist/client
+          elif [ -d .output/public ]; then
+            OUT=.output/public
+          elif [ -d dist ]; then
+            OUT=dist
+          else
+            echo "No build output directory found" >&2
+            exit 1
+          fi
+          echo "Using output directory: $OUT"
+          echo "pages_dir=$OUT" >> "$GITHUB_ENV"
+          touch "$OUT/.nojekyll"
+          cp "$OUT/index.html" "$OUT/404.html"
 
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: dist/client
+          path: ${{ env.pages_dir }}
 
   deploy:
     needs: build
