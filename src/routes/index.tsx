@@ -9,7 +9,7 @@ import { Contact, Education, Footer } from "@/components/closing";
 
 const title = "Neha Yarrapothu — Java Full Stack Developer";
 const description =
-  "Portfolio of Neha Yarrapothu, a Java Full Stack Developer in Denton, TX building enterprise web applications with Java 11/17, Spring Boot, REST APIs, Hibernate/JPA, and SQL.";
+  "Portfolio of Neha Yarrapothu, a Java Full Stack Developer in Denton, TX working on approval workflows, batch processing, rental applications, and online auctions with Java, Spring Boot, REST APIs, and SQL.";
 
 export const Route = createFileRoute("/")({
   head: () => ({

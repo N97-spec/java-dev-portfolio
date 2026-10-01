@@ -5,7 +5,7 @@ export const profile = {
   headline: ["Java", "Spring Boot", "SQL"],
   base: "Denton, TX",
   summary:
-    "Java Full Stack Developer building and supporting enterprise web applications across the full lifecycle — requirements through deployment — with Java 11/17, Spring Boot, REST APIs, Hibernate/JPA, and relational databases.",
+    "Java Full Stack Developer building and supporting enterprise applications across the full lifecycle — from requirements and development to testing, releases, and production support — with Java 11/17, Spring Boot, REST APIs, and SQL.",
   facts: [
     { label: "Based in", value: "Denton, TX" },
     { label: "Focus", value: "Java 11 / 17 · Spring Boot" },
@@ -39,6 +39,8 @@ export const ticker = [
   "CI/CD",
   "AWS",
   "Microservices",
+  "Batch Processing",
+  "GitHub Copilot",
 ];
 
 export const skillGroups: { group: string; items: string[] }[] = [
@@ -88,6 +90,10 @@ export const skillGroups: { group: string; items: string[] }[] = [
     items: ["Kafka", "Asynchronous Service Communication", "Event-Driven Processing"],
   },
   {
+    group: "Batch Processing",
+    items: ["Scheduled Processing", "High-Volume Processing", "Failure Handling", "Restart & Reprocessing"],
+  },
+  {
     group: "Build / DevOps",
     items: ["Maven", "Jenkins", "Docker", "CI/CD", "Build & Deployment Support", "AWS Tooling"],
   },
@@ -123,6 +129,10 @@ export const skillGroups: { group: string; items: string[] }[] = [
       "Tomcat",
     ],
   },
+  {
+    group: "AI Tools",
+    items: ["GitHub Copilot", "Microsoft Copilot", "ChatGPT"],
+  },
 ];
 
 export type Job = {
@@ -144,16 +154,16 @@ export const experience: Job[] = [
     span: "Aug 2025 – Present",
     current: true,
     blurb:
-      "Internal operations portal used to manage customer orders, service requests, and day-to-day processing activities.",
+      "Java and Spring Boot approval-processing service routing business requests through validation, review, decisions, and status updates.",
     highlights: [
-      "Build backend features with Java 17 and Spring Boot — REST APIs, service-layer logic, validations, and database integrations.",
-      "Design and enhance REST APIs for order and service workflows while keeping controller, service, and repository responsibilities clear.",
-      "Integrate backend services with PostgreSQL using Spring Data JPA and Hibernate; write SQL for data checks and production issue analysis.",
-      "Maintain JSP-based pages and enhance HTML5, CSS3, Bootstrap, and JavaScript interfaces connected to backend REST services.",
-      "Document and test endpoints with Swagger/OpenAPI and Postman; create and update JUnit and Mockito tests as business rules change.",
-      "Support Jenkins and Docker build and deployment activities and coordinate fixes with QA and business teams across releases.",
+      "Build REST APIs to submit approval requests, retrieve details, update decisions, and track processing status.",
+      "Implement request and eligibility validations, workflow transitions, exception handling, and audit-friendly status updates.",
+      "Maintain modular controller, service, and repository layers with reusable Java components for approval operations.",
+      "Integrate PostgreSQL through Spring Data JPA and Hibernate; use SQL to verify data and investigate production issues.",
+      "Document endpoints with Swagger/OpenAPI and Postman; test service logic and defect fixes with JUnit and Mockito.",
+      "Support Maven builds, Git development, Jenkins pipelines, Docker deployments, QA validation, and post-release troubleshooting.",
     ],
-    stack: ["Java 17", "Spring Boot", "Spring Data JPA", "Hibernate", "PostgreSQL", "JSP", "Bootstrap", "JUnit", "Mockito", "Maven", "Jenkins", "Docker"],
+    stack: ["Java", "Spring Boot", "REST APIs", "Spring Data JPA", "Hibernate", "PostgreSQL", "Swagger/OpenAPI", "JUnit", "Mockito", "Maven", "Jenkins", "Docker"],
   },
   {
     company: "BluePeak Software Solutions",
@@ -161,16 +171,16 @@ export const experience: Job[] = [
     role: "Java Developer",
     span: "Nov 2024 – Jul 2025",
     blurb:
-      "Web-based case management application used by operations teams to review requests, update case details, and track work through different stages.",
+      "Scheduled and high-volume batch-processing services for business operations outside user-driven request flows.",
     highlights: [
-      "Developed Java 17 and Spring Boot components for case creation, status updates, search, and supporting business rules.",
-      "Built and maintained REST endpoints for case-management workflows and connected them with JSP and JavaScript screens.",
-      "Used Spring Data JPA and Hibernate for persistence with PostgreSQL; wrote SQL queries to investigate data issues.",
-      "Implemented validation and clearer exception handling for user and API error messages, plus reusable service-layer components.",
-      "Created JUnit and Mockito unit tests and verified API behavior with Postman during development and defect fixes.",
-      "Supported Jenkins and Docker in the build and deployment process and worked Agile with Jira defect tracking.",
+      "Built Java 17 and Spring Boot components to read work items, apply processing rules, update results, and record execution status.",
+      "Validated incomplete records before downstream processing and supported restart and reprocessing of failed items.",
+      "Used Spring Data JPA and Hibernate with PostgreSQL; wrote SQL to analyze failures and verify results.",
+      "Added logging and exception handling for failed processing and REST endpoints for operational status visibility.",
+      "Tested processing logic and errors with JUnit and Mockito; verified APIs using Postman and Swagger/OpenAPI.",
+      "Worked with QA on normal, failure, and reprocessing scenarios; supported Maven, Git, Jenkins, and Docker releases.",
     ],
-    stack: ["Java 17", "Spring Boot", "Spring Data JPA", "Hibernate", "PostgreSQL", "JSP", "JavaScript", "JUnit", "Mockito", "Git", "Maven", "Jenkins", "Docker"],
+    stack: ["Java 17", "Spring Boot", "Batch Processing", "Spring Data JPA", "Hibernate", "PostgreSQL", "JUnit", "Mockito", "Maven", "Git", "Jenkins", "Docker"],
   },
   {
     company: "NorthBridge Technology Solutions",
@@ -178,16 +188,15 @@ export const experience: Job[] = [
     role: "Java Full Stack Developer",
     span: "Oct 2021 – Jul 2024",
     blurb:
-      "Customer account and service management platform used by internal teams to manage customer profiles, service requests, and account activity.",
+      "Web and mobile rental marketplace connecting borrowers and product owners across the reservation lifecycle.",
     highlights: [
-      "Developed backend services using Java 11/17 and Spring Boot for customer, account, and service-request workflows.",
-      "Built and enhanced REST APIs and connected them to JavaScript-based web interfaces and reusable JSP pages and forms.",
-      "Used Spring Data JPA, Hibernate/JPA mappings, and PostgreSQL; wrote SQL to troubleshoot data issues and improve slow-running operations.",
-      "Added unit tests with JUnit and Mockito and verified API behavior with Postman before changes moved into QA.",
-      "Supported production support by reproducing reported problems, identifying root causes, and coordinating application fixes.",
-      "Used Jira for sprint work and defects; supported builds and deployments with Maven, Git, Jenkins, and Docker.",
+      "Developed Java and Spring Boot functionality for registration, sign-in, product discovery, reservations, and rental status.",
+      "Built REST APIs for borrower, owner, and administrative features, including listings and reservation decisions.",
+      "Supported messaging between participants and payment-related workflows for charges and rental settlement.",
+      "Maintained controller, service, and persistence layers using Spring Data JPA/Hibernate and database queries.",
+      "Connected JavaScript/JSP interfaces to backend services and added validation and exception handling for account and reservation operations.",
     ],
-    stack: ["Java 11/17", "Spring Boot", "Hibernate", "PostgreSQL", "JavaScript", "JSP", "JUnit", "Mockito", "Jira", "Maven", "Git", "Jenkins", "Docker"],
+    stack: ["Java", "Spring Boot", "REST APIs", "Spring Data JPA", "Hibernate", "JavaScript", "JSP"],
   },
   {
     company: "Sagar Soft",
@@ -195,33 +204,31 @@ export const experience: Job[] = [
     role: "Java Developer",
     span: "Dec 2019 – Sep 2021",
     blurb:
-      "Java-based banking application handling customer account information and day-to-day transaction workflows.",
+      "Online auction platform for authorized users to place time-bound bids on properties and other listed assets.",
     highlights: [
-      "Developed Spring Boot services and REST endpoints for account lookup and transaction processing.",
-      "Implemented business validations and exception handling for consistent API behavior.",
-      "Used Hibernate/JPA and Oracle for database operations and wrote SQL for data checks and issue analysis.",
-      "Worked with Kafka for asynchronous communication between services where workflows did not need to run synchronously.",
-      "Created JUnit tests for backend functionality and tested REST endpoints using Postman.",
-      "Used Maven, Git, Jenkins, and Jira as part of the development and release process.",
+      "Built Java and Spring backend functionality for auction setup, participant access, bidding, and results.",
+      "Developed REST endpoints for auction details and user actions with eligibility and bid validations.",
+      "Supported time-based bidding behavior and processing to capture activity during active auctions.",
+      "Used Hibernate/JPA and Oracle for auction, participant, bid, and result data, with SQL for verification and reporting support.",
+      "Added exception handling and maintained Java/J2EE web components and JavaScript interfaces.",
     ],
-    stack: ["Java", "Spring Boot", "Hibernate/JPA", "Oracle", "Kafka", "JUnit", "Postman", "Maven", "Git", "Jenkins"],
+    stack: ["Java", "Spring", "REST APIs", "Hibernate/JPA", "Oracle", "SQL", "JavaScript"],
   },
   {
     company: "Rajasri Infotech",
     location: "India",
-    role: "Java Developer Intern → Software Developer",
+    role: "Java Developer Intern → Software Developer (Full Time)",
     span: "Jan 2018 – Nov 2019",
     blurb:
-      "Java web applications supporting inventory and employee/leave management workflows.",
+      "Web-based enterprise operations platform for employee records, work requests, approvals, and administrative activity.",
     highlights: [
       "Started as a Java Developer Intern and transitioned into a full-time Software Developer role.",
-      "Built Java classes and web components using Core Java, JSP, Servlets, JDBC, and Spring MVC.",
-      "Implemented CRUD operations with JDBC and MySQL and added input validation for inventory, employee, and leave forms.",
-      "Created and maintained HTML, CSS, Bootstrap, and JavaScript interface components.",
-      "Wrote MySQL queries for inserts, updates, searches, and data retrieval; deployed changes to Tomcat.",
-      "Applied OOP, collections, exception handling, SQL, and SDLC practices with code reviews alongside senior developers.",
+      "Developed modules for employee records, work requests, approval status, and administrative activities.",
+      "Built Core Java, Spring MVC, JSP, Servlet, JDBC, and MySQL components for application workflows.",
+      "Implemented CRUD operations and administrative screens for reviewing records and updating status.",
+      "Added client- and server-side validation and wrote MySQL queries for reporting and troubleshooting.",
     ],
-    stack: ["Core Java", "JSP", "Servlets", "Spring MVC", "JDBC", "MySQL", "Bootstrap", "Maven", "Git", "Tomcat"],
+    stack: ["Core Java", "Spring MVC", "JSP", "Servlets", "JDBC", "MySQL"],
   },
 ];
 
@@ -235,94 +242,60 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    name: "UCO Approval SVC",
+    name: "Approval Processing Service",
     org: "CedarWave Technologies",
     summary:
-      "Approval-focused service within the application ecosystem, handling request processing and business-rule validation.",
+      "Service routing business requests through validation, review, decisions, and status updates.",
     points: [
-      "REST endpoints with clear controller, service, and repository separation, persisted through Spring Data JPA and Hibernate.",
-      "Handled validation, exception scenarios, and database checks against PostgreSQL during development and production support.",
-      "Verified API behavior with Postman and Swagger/OpenAPI with JUnit and Mockito coverage.",
+      "REST APIs for approval submission, request details, decisions, and processing status.",
+      "Business validations, workflow transitions, and audit-friendly status changes with PostgreSQL persistence.",
+      "JUnit and Mockito tests, Swagger/OpenAPI documentation, and production issue investigation.",
     ],
-    tags: ["Spring Boot", "JPA", "PostgreSQL", "Swagger", "JUnit"],
+    tags: ["Spring Boot", "Spring Data JPA", "PostgreSQL", "Swagger/OpenAPI", "JUnit"],
   },
   {
-    name: "UCO Batch Processor",
-    org: "CedarWave Technologies",
-    summary:
-      "Batch-oriented backend processing for recurring or high-volume application work outside normal user-driven request flows.",
-    points: [
-      "Implemented Java and Spring Boot components for processing logic, validations, database interactions, and reliable data handling.",
-      "Investigated failed or inconsistent processing by reviewing application behavior and database records, then coordinated fixes.",
-    ],
-    tags: ["Spring Boot", "Batch Processing", "SQL", "Jenkins", "Docker"],
-  },
-  {
-    name: "Operations Portal",
-    org: "CedarWave Technologies",
-    summary:
-      "Internal portal for managing customer orders, service requests, and daily processing activities.",
-    points: [
-      "Backend REST services in Java 17 and Spring Boot with service-layer validations and reusable Java components.",
-      "JSP pages, Bootstrap, and JavaScript interfaces wired to REST services, handling responses and validation messages.",
-    ],
-    tags: ["Java 17", "Spring Boot", "PostgreSQL", "JSP", "Bootstrap"],
-  },
-  {
-    name: "Case Management System",
+    name: "Batch Processing Services",
     org: "BluePeak Software Solutions",
     summary:
-      "Case management for operations teams to review requests, update details, and track work through stages.",
+      "Scheduled and high-volume processing for business operations outside user-driven request flows.",
     points: [
-      "Java 17 and Spring Boot components for case creation, status updates, search, and supporting business rules.",
-      "Reusable service-layer components kept case-processing logic organized and maintainable across modules.",
+      "Java 17 and Spring Boot components for work-item processing, validation, result updates, and execution tracking.",
+      "Failure handling, restart and reprocessing support, and SQL-based verification of results.",
     ],
-    tags: ["Spring Boot", "REST", "PostgreSQL", "JUnit", "Jira"],
+    tags: ["Java 17", "Spring Boot", "Batch Processing", "PostgreSQL", "SQL"],
   },
   {
-    name: "Customer Account & Service Platform",
+    name: "Rental Marketplace",
     org: "NorthBridge Technology Solutions",
     summary:
-      "Platform for internal teams to manage customer profiles, service requests, and account activity.",
+      "Web and mobile marketplace connecting borrowers and owners across product discovery and reservations.",
     points: [
-      "Spring Boot services and REST APIs for customer, account, and service-request workflows, with Hibernate/JPA persistence.",
-      "Enhanced existing modules against business requirements while preserving compatibility with established workflows.",
+      "Backend APIs for user accounts, product listings, rental requests, and owner approval decisions.",
+      "Administrative, messaging, and payment-related workflows connected to JavaScript/JSP interfaces.",
     ],
-    tags: ["Java 11/17", "Spring Boot", "Hibernate", "PostgreSQL", "JavaScript"],
+    tags: ["Java", "Spring Boot", "REST APIs", "Hibernate", "JavaScript", "JSP"],
   },
   {
-    name: "Banking Accounts & Transactions",
+    name: "Online Auction Platform",
     org: "Sagar Soft",
     summary:
-      "Banking application covering customer account information and day-to-day transaction workflows.",
+      "Time-bound bidding platform for authorized users and listed properties or other assets.",
     points: [
-      "Spring Boot services and REST endpoints for account lookup and transaction processing with consistent validation and exception handling.",
-      "Kafka-based asynchronous service communication, with troubleshooting of message-processing issues.",
+      "Backend services for auction setup, participant access, bidding, and results processing.",
+      "Bid and eligibility validations with Oracle persistence and SQL-based reporting support.",
     ],
-    tags: ["Spring Boot", "Oracle", "Kafka", "Hibernate", "JUnit"],
+    tags: ["Java", "Spring", "REST APIs", "Hibernate/JPA", "Oracle"],
   },
   {
-    name: "Slendit",
-    org: "E-commerce Rental Platform",
-    summary:
-      "Rental platform connecting borrowers with product owners across the full reservation lifecycle, from account access through booking and payment.",
-    points: [
-      "Borrower workflows for registration, sign-in, product selection, and reservations, plus owner listing and request approval.",
-      "Administrative features for managing users and products, configuring settings, and supporting scheduled batch operations.",
-      "REST backend in a microservices environment using Kafka, Splunk, and AWS-related tooling for debugging and releases.",
-    ],
-    tags: ["Java", "Spring", "Microservices", "Kafka", "REST", "Splunk", "AWS"],
-  },
-  {
-    name: "Inventory & Leave Management",
+    name: "Enterprise Operations Platform",
     org: "Rajasri Infotech",
     summary:
-      "Java web applications for inventory records and employee/leave management workflows.",
+      "Web-based platform for employee records, work requests, approval status, and administration.",
     points: [
-      "JSP forms with Servlet request handling and JDBC persistence for end-to-end application workflows.",
-      "Employee records, leave requests, approval status, and product and stock information with client- and server-side validation.",
+      "JSP forms, Servlet request handling, JDBC and MySQL persistence for operational workflows.",
+      "Administrative screens for reviewing records and updating status with client- and server-side validation.",
     ],
-    tags: ["Core Java", "JSP", "Servlets", "JDBC", "MySQL", "Tomcat"],
+    tags: ["Core Java", "Spring MVC", "JSP", "Servlets", "JDBC", "MySQL"],
   },
 ];
 
