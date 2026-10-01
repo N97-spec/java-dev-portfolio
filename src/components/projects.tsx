@@ -8,7 +8,7 @@ export function Projects() {
         index="03"
         kicker="Selected work"
         title="Systems I've worked on"
-        description="Backend services, batch pipelines, and the interfaces attached to them — across operations, banking, case management, and e-commerce."
+        description="Approval workflows, scheduled batch processing, rental reservations, time-bound bidding, and enterprise operations."
       />
 
       <div className="grid gap-5 md:grid-cols-2">

@@ -9,7 +9,7 @@ export function Experience() {
           index="02"
           kicker="Professional experience"
           title="Where I've shipped Java"
-          description="Five teams, one consistent pattern: layered Java services, well-tested APIs, and production support close to the data."
+          description="Five teams across approvals, batch processing, rentals, auctions, and enterprise operations — with layered Java services and production support."
         />
 
         <div className="relative">
