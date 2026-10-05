@@ -148,7 +148,7 @@ export type Job = {
 
 export const experience: Job[] = [
   {
-    company: "CedarWave Technologies",
+    company: "Cedar Gate Technologies",
     location: "Plano, TX",
     role: "Java Full Stack Developer",
     span: "Aug 2025 – Present",
@@ -166,7 +166,7 @@ export const experience: Job[] = [
     stack: ["Java", "Spring Boot", "REST APIs", "Spring Data JPA", "Hibernate", "PostgreSQL", "Swagger/OpenAPI", "JUnit", "Mockito", "Maven", "Jenkins", "Docker"],
   },
   {
-    company: "BluePeak Software Solutions",
+    company: "BluePeak Technologies",
     location: "Irving, TX",
     role: "Java Developer",
     span: "Nov 2024 – Jul 2025",
@@ -243,7 +243,7 @@ export type Project = {
 export const projects: Project[] = [
   {
     name: "Approval Processing Service",
-    org: "CedarWave Technologies",
+    org: "Cedar Gate Technologies",
     summary:
       "Service routing business requests through validation, review, decisions, and status updates.",
     points: [
@@ -255,7 +255,7 @@ export const projects: Project[] = [
   },
   {
     name: "Batch Processing Services",
-    org: "BluePeak Software Solutions",
+    org: "BluePeak Technologies",
     summary:
       "Scheduled and high-volume processing for business operations outside user-driven request flows.",
     points: [
